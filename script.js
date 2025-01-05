@@ -7,6 +7,11 @@ document.getElementById("no-button").addEventListener("click", function() {
 
     const image = document.getElementById("imagem");
     image.style.display = "block";
+
+    const borboleta = document.getElementById("borboleta");
+    if (borboleta) {
+        borboleta.style.display = "none";
+    }
 });
 
 
