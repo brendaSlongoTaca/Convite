@@ -1,0 +1,64 @@
+body {
+    display: flex; 
+    justify-content: center; 
+    height: 100vh; 
+    margin: 0; 
+    background-color: #c3ff8a; 
+    padding: 20px;
+}
+
+
+h1 {
+    font-family: "Castoro Titling", serif; 
+    font-size: 30px;
+}
+
+div {
+    font-family: "Georgia", serif;
+    font-size: 20px;
+}
+
+
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: 2px solid #0300a7; 
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+    transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out; 
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 30px;
+}
+
+button:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 1);
+}
+
+.yes {
+    background-color: #0665e0;
+    color: white;
+}
+
+.no {
+    background-color: #505050;
+    color: white;
+}
+
+
+
+.bi-whatsapp {
+    color: #1bce5d; 
+    transition: transform 0.3s ease;
+    font-family: "Georgia", serif;
+}
+
+.bi-whatsapp:hover {
+    transform: scale(1.2); 
+}
