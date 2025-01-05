@@ -45,7 +45,7 @@
             Escolha com sabedoria...
         </div>
 
-        <img src="img/butterfly-effect-life-is-strange.gif" style="width: 200px; height: auto; margin-top: 20px;">
+        <img id="borboleta" src="img/butterfly-effect-life-is-strange.gif" style="width: 200px; height: auto; margin-top: 20px;">
 
         <br><br>
 
@@ -55,7 +55,7 @@
         </div>
 
         <br><br>
-
+    
         <div id="mensagem" style="display:none; font-size: 50px; color: #333;"></div>
         <img id="imagem" src="img/Gato_desconfiado.gif" alt="Imagem após o clique" style="display:none; width: 200px; height: auto; border-radius: 20px;">
     
@@ -64,8 +64,17 @@
 
     <script>
         var audio = new Audio("https://github.com/brendaSlongoTaca/Audios/raw/main/life_is_strange.mp3");
-        audio.loop = true;  // Define o loop
-        audio.play();       // Inicia o áudio
+        var playCount = 0; // Contador para controlar as repetições
+        var maxPlays = 4; // Número máximo de repetições
+    
+        audio.addEventListener("ended", function () {
+            playCount++;
+            if (playCount < maxPlays) {
+                audio.play(); // Reproduz novamente enquanto não atingir o limite
+            }
+        });
+    
+        audio.play(); // Começa a reprodução
     </script>
 
     <script src="script.js"></script>
